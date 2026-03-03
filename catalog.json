@@ -4139,322 +4139,306 @@
     {
       "year": -1400,
       "side": "world",
-      "title": "후리안 찬가",
-      "desc": "현존 최고(最古) 악보 — 시리아 우가릿 출토",
+      "title": "후리안 찬가 (BC 1400)",
+      "desc": "시리아 우가릿 출토. 현존 최고 악보. 니칼(달의 여신)에게 바친 찬가.",
       "regionId": "ancient_greco_roman",
       "trackTitle": "Hurrian Hymn No6 1400Bc"
     },
     {
-      "year": -200,
+      "year": -408,
       "side": "world",
-      "title": "세이킬로스 비문",
-      "desc": "현존 최고 완전한 악보 (고대 그리스)",
-      "regionId": "national_anthems",
-      "trackTitle": "Seikilos Epitaph"
+      "title": "에우리피데스 오레스테스 코러스 (BC 408)",
+      "desc": "현존 최고 그리스 비극 음악 단편. 에우리피데스 작.",
+      "regionId": "ancient_greco_roman",
+      "trackTitle": "Orestes Papyrus Fragment 200Bc"
     },
     {
-      "year": 138,
+      "year": -200,
       "side": "world",
-      "title": "아폴론 찬가",
-      "desc": "델피 신전 석판에 새겨진 그리스 음악",
+      "title": "세이킬로스 비문 (BC 200~100)",
+      "desc": "터키 아이딘 묘비 발견. 완전한 형태의 세계 최고 악곡. '살아있는 동안 빛나라.'",
       "regionId": "ancient_greco_roman",
-      "trackTitle": "Delphic Hymn To Apollo 128Bc"
+      "trackTitle": "Seikilos Epitaph 200Bc"
+    },
+    {
+      "year": -128,
+      "side": "world",
+      "title": "델피 아폴론 찬가 (BC 128)",
+      "desc": "아테네인이 델피 신전에서 연주. 석판에 새긴 악보 발견.",
+      "regionId": "ancient_greco_roman",
+      "trackTitle": "Delphic Hymn 2 Limenius 128Bc"
+    },
+    {
+      "year": 130,
+      "side": "world",
+      "title": "메소메데스 찬가 (2세기)",
+      "desc": "크레타 출신, 로마 황제 하드리아누스 궁정 음악가. 태양·뮤즈·네메시스 찬가.",
+      "regionId": "ancient_greco_roman",
+      "trackTitle": "Mesomedes Hymn To Helios 2Ndc Ad"
     },
     {
       "year": -57,
       "side": "korea",
-      "title": "삼국시대 시작",
-      "desc": "신라 건국 — 가야금·거문고의 태동",
+      "title": "삼국시대 시작 (BC 57)",
+      "desc": "가야금(우륵), 거문고(왕산악) 창제. 안악3호분 벽화 음악 연주 장면.",
       "regionId": "korean",
       "trackTitle": null
     },
     {
-      "year": 551,
+      "year": 600,
       "side": "korea",
-      "title": "가야금 전래",
-      "desc": "가야 우륵이 신라에 가야금 전수",
+      "title": "수제천 — 정읍사 (백제)",
+      "desc": "백제 정읍사에서 유래. 현존 최고 관악곡. 국가무형문화재 제1호.",
       "regionId": "korean",
-      "trackTitle": null
+      "trackTitle": "수제천"
     },
     {
       "year": 612,
       "side": "korea",
-      "title": "미마지의 기악",
-      "desc": "백제 미마지가 일본에 기악(伎樂) 전수",
+      "title": "미마지의 기악 전수 (612)",
+      "desc": "백제 미마지가 일본에 기악(伎樂) 전수. 한국→일본 음악 전파의 증거.",
       "regionId": "korean",
       "trackTitle": null
     },
     {
-      "year": 590,
+      "year": 600,
       "side": "world",
-      "title": "그레고리안 성가",
-      "desc": "교황 그레고리우스 1세 — 서양 기보법의 시작",
+      "title": "그레고리안 성가 (6~10세기)",
+      "desc": "교황 그레고리오 1세(590~604). 서양 음악 기보법의 기원.",
       "regionId": "europe_medieval",
-      "trackTitle": null
+      "trackTitle": "Agnus Dei (C)Clark"
     },
     {
-      "year": 879,
-      "side": "korea",
-      "title": "처용가",
-      "desc": "신라 헌강왕 때 창작 — 현존 최고 향가",
-      "regionId": "korean",
-      "trackTitle": null
-    },
-    {
-      "year": 1000,
+      "year": 1030,
       "side": "world",
-      "title": "귀도 다레초의 기보법",
-      "desc": "4선 악보와 솔미제이션 — 서양 오선보의 기원",
+      "title": "귀도 다레초의 솔미제이션 (1030)",
+      "desc": "귀도 다레초(991~1033)가 도레미파솔라 발명. 4선 보표 창안.",
       "regionId": "europe_medieval",
       "trackTitle": null
     },
     {
       "year": 1100,
-      "side": "world",
-      "title": "트루바두르 음악",
-      "desc": "남프랑스 음유시인의 세속 노래",
-      "regionId": "europe_medieval",
-      "trackTitle": null
+      "side": "korea",
+      "title": "보허자 전래 (고려)",
+      "desc": "송나라에서 전래된 당악. 한국에서 독자 발전하여 원곡과 전혀 다른 곡이 됨.",
+      "regionId": "korean",
+      "trackTitle": "보허자"
     },
     {
       "year": 1116,
       "side": "korea",
-      "title": "대성아악 수입",
-      "desc": "고려, 송나라로부터 아악·악기·악보 전래",
+      "title": "대성아악 수입 (1116)",
+      "desc": "고려 예종, 송나라로부터 대성아악(大晟雅樂) 수입. 악기·악보·악공 포함.",
       "regionId": "korean",
       "trackTitle": null
     },
     {
       "year": 1240,
       "side": "world",
-      "title": "여름이 오면 (Sumer Is Icumen In)",
-      "desc": "현존 최고 영어 라운드 — 다성음악의 시작",
-      "regionId": "national_anthems",
-      "trackTitle": "Sumer Is Icumen In"
+      "title": "Sumer Is Icumen In (1240)",
+      "desc": "현존 최고 영어 노래이자 최초의 라운드(돌림노래). 영국 레딩 수도원.",
+      "regionId": "europe_medieval",
+      "trackTitle": "Sumer Is Icumen In I (C)Clark"
+    },
+    {
+      "year": 1280,
+      "side": "world",
+      "title": "에스탐피 (13세기)",
+      "desc": "중세 유럽 대표 무곡. 빠른 템포의 춤곡으로 궁정에서 연주.",
+      "regionId": "europe_medieval",
+      "trackTitle": "Estampie 1 (C)Clark"
     },
     {
       "year": 1300,
       "side": "world",
-      "title": "아르스 노바",
-      "desc": "기욤 드 마쇼 — 복잡한 리듬과 다성음악의 혁신",
+      "title": "아르스 노바 — 기욤 드 마쇼 (14세기)",
+      "desc": "마쇼(1300~1377): 최초의 완전한 미사 통상문 작곡. 다성음악의 혁명.",
       "regionId": "europe_medieval",
       "trackTitle": null
     },
     {
-      "year": 1392,
-      "side": "korea",
-      "title": "조선 건국",
-      "desc": "아악 정비, 궁중음악 체계화 시작",
-      "regionId": "korean",
+      "year": 1350,
+      "side": "world",
+      "title": "살타렐로 (14세기 이탈리아)",
+      "desc": "이탈리아 트레첸토 시대의 활기찬 춤곡. 3박자 계통.",
+      "regionId": "europe_medieval",
       "trackTitle": null
     },
     {
-      "year": 1430,
+      "year": 1445,
       "side": "korea",
-      "title": "박연의 아악 정비",
-      "desc": "편경 제작, 율관 교정 — 조선 아악의 완성",
+      "title": "여민락 — 세종대왕 작곡 (1445)",
+      "desc": "용비어천가 선율 기반. '백성과 함께 즐긴다(與民同樂)'. 세종(1397~1450) 작곡.",
       "regionId": "korean",
-      "trackTitle": null
+      "trackTitle": "여민락"
     },
     {
       "year": 1447,
       "side": "korea",
-      "title": "정간보 창제 ★",
-      "desc": "세종대왕 — 동양 최초 정량기보법. 서양 오선보보다 200년 앞서",
+      "title": "★ 정간보 창제 (1447)",
+      "desc": "세종대왕이 창제한 동아시아 최초의 정량적 기보법. 음의 높이(율명)와 길이(정간)를 동시 표기.",
       "regionId": "korean",
       "trackTitle": "여민락"
     },
     {
       "year": 1450,
       "side": "korea",
-      "title": "보태평·정대업",
-      "desc": "세종대왕 작곡 → 종묘제례악 (유네스코 2001)",
+      "title": "보태평·정대업 — 종묘제례악",
+      "desc": "세종 작곡, 세조 때 종묘제례에 채택. 보태평 11곡(문덕)+정대업 15곡(무공). 유네스코 인류무형문화유산(2001).",
       "regionId": "korean",
-      "trackTitle": "영산회상 상령산"
-    },
-    {
-      "year": 1450,
-      "side": "world",
-      "title": "르네상스 음악",
-      "desc": "뒤파이·오케겜 — 합창 다성음악의 황금기",
-      "regionId": "europe_medieval",
       "trackTitle": null
     },
     {
       "year": 1493,
       "side": "korea",
-      "title": "악학궤범",
-      "desc": "성현 편찬 — 한국 최초의 종합 악서",
+      "title": "악학궤범 편찬 (1493)",
+      "desc": "성현(成俔) 편찬. 한국 최초의 종합 음악서. 악기·악보·무보·의식 총정리.",
       "regionId": "korean",
       "trackTitle": null
     },
     {
-      "year": 1500,
+      "year": 1560,
       "side": "world",
-      "title": "오스만 궁정음악",
-      "desc": "마캄 체계 확립 — 중동 음악의 정수",
-      "regionId": "middle_east",
+      "title": "팔레스트리나 (16세기)",
+      "desc": "팔레스트리나(1525~1594): 대위법의 완성자. 교황 마르첼루스 미사곡.",
+      "regionId": "europe_medieval",
       "trackTitle": null
     },
     {
       "year": 1580,
       "side": "world",
-      "title": "그린슬리브스",
-      "desc": "영국 르네상스 민요의 대표작",
-      "regionId": "national_anthems",
-      "trackTitle": "Greensleeves"
-    },
-    {
-      "year": 1600,
-      "side": "korea",
-      "title": "가곡의 발전",
-      "desc": "조선 문인들의 풍류방 음악 — 시조+노래",
-      "regionId": "korean",
-      "trackTitle": null
-    },
-    {
-      "year": 1600,
-      "side": "world",
-      "title": "바로크 시대 시작",
-      "desc": "오페라 탄생, 통주저음 — 몬테베르디",
+      "title": "그린슬리브스 (16세기 영국)",
+      "desc": "영국 대표 민요. 헨리 8세 작곡설은 근거 없음. 엘리자베스 시대 유행.",
       "regionId": "europe_medieval",
-      "trackTitle": null
+      "trackTitle": "Greensleeves (C)Clark"
     },
     {
-      "year": 1700,
+      "year": 1640,
       "side": "world",
-      "title": "인도 라가의 체계화",
-      "desc": "힌두스탄·카르나틱 고전음악 분화",
-      "regionId": "india",
-      "trackTitle": null
+      "title": "이트리 — 오스만 궁정음악 (17세기)",
+      "desc": "이트리(Itrî, 1640~1712): 오스만 궁정 최고의 작곡가. 마캄 음악 체계의 완성.",
+      "regionId": "middle_east",
+      "trackTitle": "Hicaz — Agirsemai — Guller Kizarir (Ibrahim Aga)"
     },
     {
-      "year": 1750,
-      "side": "korea",
-      "title": "판소리 탄생",
-      "desc": "민중 속에서 탄생한 서사적 음악극 (유네스코 2003)",
-      "regionId": "korean",
-      "trackTitle": null
-    },
-    {
-      "year": 1760,
+      "year": 1670,
       "side": "world",
-      "title": "아일랜드 민요의 황금기",
-      "desc": "캐롤런 — 하프 음악의 수집과 보존",
+      "title": "오캐롤란 — 아일랜드 하프 (17세기)",
+      "desc": "투를로흐 오캐롤란(1670~1738): 아일랜드 하프 음악의 마지막 거장. 눈먼 하프 연주자.",
       "regionId": "celtic",
       "trackTitle": null
     },
     {
+      "year": 1700,
+      "side": "korea",
+      "title": "영산회상 완성 (조선 후기)",
+      "desc": "현악 9곡 모음곡으로 정착. 조선 후기 풍류방 음악의 정수. 상령산→군악까지.",
+      "regionId": "korean",
+      "trackTitle": "영산회상 상령산"
+    },
+    {
+      "year": 1750,
+      "side": "korea",
+      "title": "가곡의 전성기 (18세기)",
+      "desc": "남창·여창 가곡이 양반 풍류방에서 전성기. 이세춘 등 가객 활동.",
+      "regionId": "korean",
+      "trackTitle": "남창우조 초수대엽"
+    },
+    {
+      "year": 1700,
+      "side": "world",
+      "title": "인도 라가 전통 (무굴 제국)",
+      "desc": "무굴 궁정에서 라가 음악 발전. 탄센(Tansen, 16세기)이 힌두스탄 음악 완성.",
+      "regionId": "india",
+      "trackTitle": "Bahar"
+    },
+    {
+      "year": 1700,
+      "side": "world",
+      "title": "중국 전통음악 — 고산유수",
+      "desc": "명·청 시대 문인 아악. 고쟁·얼후·비파 합주. 공자의 예악사상 계승.",
+      "regionId": "asia_traditional",
+      "trackTitle": "Butterfly Lovers"
+    },
+    {
       "year": 1792,
       "side": "world",
-      "title": "라 마르세예즈",
-      "desc": "프랑스 혁명의 국가 — 루제 드 릴 작곡",
+      "title": "라 마르세예즈 (1792)",
+      "desc": "루제 드 릴(Rouget de Lisle) 작곡. 프랑스 혁명의 상징. 프랑스 국가.",
       "regionId": "national_anthems",
       "trackTitle": "La Marseillaise"
     },
     {
       "year": 1800,
       "side": "korea",
-      "title": "산조의 탄생",
-      "desc": "김창조 — 가야금산조 창시. 즉흥 기악 독주의 꽃",
+      "title": "취타 — 군악 행진곡 (조선)",
+      "desc": "왕의 행차·군사 의식에 사용. 취타(吹打)='불고 치다'. 대취타와 소취타.",
       "regionId": "korean",
-      "trackTitle": null
+      "trackTitle": "취타 군악"
     },
     {
       "year": 1814,
       "side": "world",
-      "title": "성조기 (The Star-Spangled Banner)",
-      "desc": "미국 국가 — 프랜시스 스콧 키 작사",
+      "title": "성조기 (The Star-Spangled Banner, 1814)",
+      "desc": "프랜시스 스콧 키 작사. 존 스태포드 스미스 작곡 원곡. 미국 국가(1931 공식 채택).",
       "regionId": "national_anthems",
-      "trackTitle": "The Star Spangled Banner"
-    },
-    {
-      "year": 1833,
-      "side": "world",
-      "title": "독일연방찬가 (Deutschlandlied)",
-      "desc": "하이든 선율 + 호프만 가사",
-      "regionId": "national_anthems",
-      "trackTitle": "Deutschlandlied"
-    },
-    {
-      "year": 1840,
-      "side": "world",
-      "title": "어메이징 그레이스",
-      "desc": "존 뉴턴의 찬송가 — 세계에서 가장 유명한 성가",
-      "regionId": "national_anthems",
-      "trackTitle": "Amazing Grace Piano"
-    },
-    {
-      "year": 1850,
-      "side": "world",
-      "title": "갓 세이브 더 퀸",
-      "desc": "영국 국가 — 세계 최고(最古) 국가 중 하나",
-      "regionId": "national_anthems",
-      "trackTitle": "God Save The Queen"
-    },
-    {
-      "year": 1860,
-      "side": "world",
-      "title": "중국 전통음악의 정립",
-      "desc": "고산유수·이천영월 — 고쟁·얼후의 대표곡",
-      "regionId": "asia_traditional",
       "trackTitle": null
     },
     {
-      "year": 1870,
-      "side": "korea",
-      "title": "영산회상의 완성",
-      "desc": "현악영산회상 9곡 모음곡 — 풍류의 정수",
-      "regionId": "korean",
-      "trackTitle": "영산회상 상령산"
+      "year": 1835,
+      "side": "world",
+      "title": "라틴 아메리카 전통음악",
+      "desc": "안데스 케나·차랑고, 베네수엘라 호로포. 원주민·스페인·아프리카 문화 융합.",
+      "regionId": "latin_america",
+      "trackTitle": "Mananitapueblerina"
     },
     {
-      "year": 1880,
+      "year": 1870,
       "side": "world",
-      "title": "라틴 아메리카 음악",
-      "desc": "호로포·왈츠·탱고 — 라틴 리듬의 확산",
+      "title": "켈틱 부흥 운동 (19세기)",
+      "desc": "아일랜드·스코틀랜드 전통음악 수집·보존 운동. 게일어 연맹(1893) 설립.",
+      "regionId": "celtic",
+      "trackTitle": "Afton"
+    },
+    {
+      "year": 1897,
+      "side": "korea",
+      "title": "근현대 — 이왕직아악부",
+      "desc": "일제강점기 이왕직아악부에서 궁중음악 명맥 유지. 1951년 국립국악원 설립.",
+      "regionId": "korean",
+      "trackTitle": null
+    },
+    {
+      "year": 1913,
+      "side": "world",
+      "title": "콘도르는 날아가고 (1913)",
+      "desc": "다니엘 알로미아 로블레스(페루) 작곡. 안데스 음악의 상징.",
       "regionId": "latin_america",
       "trackTitle": null
     },
     {
-      "year": 1899,
-      "side": "world",
-      "title": "래그타임 혁명",
-      "desc": "스콧 조플린 'Maple Leaf Rag' — 미국 대중음악의 시작",
+      "year": 1935,
+      "side": "korea",
+      "title": "애국가 작곡 (1935)",
+      "desc": "안익태(1906~1965) 작곡. 대한민국 국가.",
       "regionId": "national_anthems",
-      "trackTitle": "Maple Leaf Rag"
-    },
-    {
-      "year": 1902,
-      "side": "korea",
-      "title": "애국가 작곡",
-      "desc": "안익태 작곡 — 대한민국 국가",
-      "regionId": "korean",
-      "trackTitle": null
-    },
-    {
-      "year": 1950,
-      "side": "korea",
-      "title": "국립국악원 설립",
-      "desc": "한국 전통음악 보존·연구·공연의 중심 기관",
-      "regionId": "korean",
       "trackTitle": null
     },
     {
       "year": 2001,
       "side": "korea",
-      "title": "종묘제례악 유네스코 등재",
-      "desc": "세종대왕의 보태평·정대업 — 인류무형문화유산",
+      "title": "종묘제례악 유네스코 등재 (2001)",
+      "desc": "세종이 작곡한 보태평·정대업. 유네스코 인류무형문화유산 등재.",
       "regionId": "korean",
       "trackTitle": null
     },
     {
-      "year": 2003,
+      "year": 2025,
       "side": "korea",
-      "title": "판소리 유네스코 등재",
-      "desc": "인류무형문화유산 — 세계가 인정한 한국 음악극",
+      "title": "★ 정간보 → MIDI 변환 (2025)",
+      "desc": "jeongganbo-midi 프로젝트. 91곡 정악을 시김새 포함 MIDI로 세계 최초 변환.",
       "regionId": "korean",
-      "trackTitle": null
+      "trackTitle": "수제천"
     }
   ]
 }
