@@ -25,26 +25,29 @@ class HarmoniaHandler(SimpleHTTPRequestHandler):
 
     def ensure_db_ready(self):
         """Ensure DB is available locally"""
-        # 1. 빌드 시 포함된 로컬 DB 확인
-        if os.path.exists(DB_FILE):
-            import shutil
-            shutil.copy2(DB_FILE, LOCAL_DB_CACHE)
-            print(f"✅ Using bundled local DB: {DB_FILE}")
-            return
+        try:
+            # 1. 빌드 시 포함된 로컬 DB 확인
+            if os.path.exists(DB_FILE):
+                import shutil
+                if not os.path.exists(LOCAL_DB_CACHE) or os.path.getsize(DB_FILE) != os.path.getsize(LOCAL_DB_CACHE):
+                    shutil.copy2(DB_FILE, LOCAL_DB_CACHE)
+                    print(f"✅ Using bundled local DB: {DB_FILE}")
+                return
 
-        # 2. 로컬에 없으면 GCS에서 시도 (백업용)
-        if not os.path.exists(LOCAL_DB_CACHE):
-            try:
+            # 2. 로컬에 없으면 GCS에서 시도 (백업용)
+            if not os.path.exists(LOCAL_DB_CACHE):
                 bucket_name = os.environ.get('GCS_BUCKET', 'harmonia-midi')
                 blob = self.storage_client.bucket(bucket_name).blob(DB_FILE)
                 blob.download_to_filename(LOCAL_DB_CACHE)
                 print(f"✅ DB downloaded from GCS: gs://{bucket_name}/{DB_FILE}")
-            except Exception as e:
-                print(f"🚨 DB Error: {e}")
-                # 빈 DB 생성 (크래시 방지)
+        except Exception as e:
+            print(f"🚨 DB Error: {e}")
+            # 빈 DB 생성 (크래시 방지)
+            if not os.path.exists(LOCAL_DB_CACHE):
                 conn = sqlite3.connect(LOCAL_DB_CACHE)
                 conn.execute("CREATE TABLE IF NOT EXISTS tracks (id INTEGER PRIMARY KEY)")
                 conn.close()
+                print("⚠️ Created empty fallback DB to prevent crash.")
 
     def do_GET(self):
         # 1. API: Search
