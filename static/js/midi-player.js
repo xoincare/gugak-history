@@ -237,8 +237,13 @@ function togglePlay() {
   }
 }
 
-function playMidi() {
+async function playMidi() {
   if (!currentMidi) return;
+
+  // Ensure audio context is started (requires user gesture)
+  if (Tone.context.state !== 'running') {
+    await Tone.start();
+  }
 
   synths.forEach(s => s.dispose());
   synths = [];
@@ -562,11 +567,35 @@ function buildTimeline() {
 
 function timelinePlay(regionId, trackTitle) {
   if (!catalog) return;
+  const region = catalog.regions.find(r => r.id === regionId);
+  if (!region) return;
+
+  // Find the track's file and basePath
+  let targetTrack = null;
+  for (const group of region.groups) {
+    for (const track of group.tracks) {
+      if (track.title === trackTitle) {
+        targetTrack = { file: track.file, title: track.title, group: group.name, basePath: region.basePath };
+        break;
+      }
+    }
+    if (targetTrack) break;
+  }
+
+  if (!targetTrack) return;
+
+  // Navigate to region, then find and play
   showRegion(regionId);
   setTimeout(() => {
     const idx = allTracks.findIndex(t => t.title === trackTitle);
-    if (idx >= 0) loadTrackByIndex(idx);
-  }, 200);
+    if (idx >= 0) {
+      loadTrackByIndex(idx);
+    } else {
+      // Fallback: direct load
+      allTracks.push({ ...targetTrack, index: allTracks.length });
+      loadTrackByIndex(allTracks.length - 1);
+    }
+  }, 300);
 }
 
 // === Init ===
