@@ -18,7 +18,7 @@
     <li><a href="#history">역사</a></li>
     <li><a href="#jeongganbo">정간보</a></li>
     <li><a href="#instruments">악기</a></li>
-    <li><a href="#listen">감상</a></li>
+    <li><a href="#listen">감상/재생</a></li>
     <li><a href="#jongmyo">종묘제례악</a></li>
     <li><a href="#opensource">오픈소스</a></li>
   </ul>
@@ -229,17 +229,11 @@
       </div>
     </div>
 
-    <h3 style="text-align:center;margin-bottom:1rem;color:var(--gold)">91곡 정악 MIDI 레퍼토리</h3>
-    <div class="midi-list">
-      <div class="midi-item"><div><span class="title">영산회상 (9곡)</span><br><span class="meta">상령산 · 중령산 · 세령산 · 가락덜이 · 상현도드리 · 염불도드리 · 타령 · 군악 · 하현도드리</span></div></div>
-      <div class="midi-item"><div><span class="title">관악영산회상 (8곡)</span><br><span class="meta">관악 편성. 대금·피리·해금·아쟁</span></div></div>
-      <div class="midi-item"><div><span class="title">평조회상 (8곡)</span><br><span class="meta">평조(우조) 선법. 6악기 편성</span></div></div>
-      <div class="midi-item"><div><span class="title">가곡 — 남창 (21곡)</span><br><span class="meta">우조/계면 초수대엽~태평가, 계락, 편락</span></div></div>
-      <div class="midi-item"><div><span class="title">가곡 — 여창 (13곡)</span><br><span class="meta">우조/계면 이수대엽~환계락</span></div></div>
-      <div class="midi-item"><div><span class="title">취타/현악취타 (9곡)</span><br><span class="meta">취타 · 군악 · 길군악 · 길타령 · 별우조타령</span></div></div>
-      <div class="midi-item"><div><span class="title">독립곡 (8곡)</span><br><span class="meta">수제천 · 여민락 · 동동 · 보허자 · 밑도드리 · 웃도드리 · 천년만세(3곡)</span></div></div>
-      <div class="midi-item"><div><span class="title">자진한잎 (7곡)</span><br><span class="meta">경풍년 · 수룡음 · 염양춘</span></div></div>
-    </div>
+    <h3 style="text-align:center;margin-bottom:1rem;color:var(--gold)">🎧 91곡 정악 MIDI 플레이어</h3>
+    <p style="text-align:center;margin-bottom:1.5rem;color:rgba(255,255,255,0.6);font-size:0.9rem">
+      곡을 클릭하면 브라우저에서 바로 재생됩니다. ⬇ 버튼으로 MIDI 파일 다운로드도 가능합니다.
+    </p>
+    <div id="midi-player-app"></div>
     <p style="text-align:center;margin-top:1.5rem;opacity:0.7">
       <a href="https://github.com/xoincare/jeongganbo-midi" style="color:var(--gold)" target="_blank">📥 GitHub에서 전곡 MIDI 다운로드</a>
     </p>
@@ -384,6 +378,9 @@
   <p style="margin-top:0.3rem;font-size:0.75rem">세종대왕이 1447년에 만든 악보가 2026년에 웹사이트가 되었습니다.</p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tonejs/midi@2.0.28/build/Midi.js"></script>
+<script src="/static/js/midi-player.js"></script>
 <script>
 // Scroll fade-in animation
 const observer = new IntersectionObserver((entries) => {
