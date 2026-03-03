@@ -1,4 +1,2 @@
-google-cloud-storage
-google-api-core
-requests
-urllib3
+# No external dependencies needed for basic server
+# google-cloud-storage only needed for GCS streaming (future)
