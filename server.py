@@ -74,21 +74,22 @@ class HarmoniaHandler(SimpleHTTPRequestHandler):
         conn = sqlite3.connect(LOCAL_DB_CACHE)
         c = conn.cursor()
         q = f"%{query}%"
-        c.execute('''SELECT id, title, composer, dataset, era, tags 
+        c.execute('''SELECT id, title, composer, dataset, era, tags, license_type, license_summary 
                      FROM tracks 
                      WHERE title LIKE ? OR composer LIKE ? OR tags LIKE ?
                      LIMIT 100''', (q, q, q))
         rows = c.fetchall()
         conn.close()
-        return [{"id": r[0], "title": r[1], "composer": r[2], "dataset": r[3], "era": r[4], "tags": r[5]} for r in rows]
+        return [{"id": r[0], "title": r[1], "composer": r[2], "dataset": r[3], "era": r[4], "tags": r[5], "license": r[6], "license_text": r[7]} for r in rows]
 
     def get_channel_songs(self, channel_id):
         conn = sqlite3.connect(LOCAL_DB_CACHE)
         c = conn.cursor()
         if channel_id == 'classical':
-            c.execute('SELECT id, title, composer, dataset, era, tags FROM tracks WHERE dataset = "mutopia_midi" LIMIT 100')
+            c.execute('SELECT id, title, composer, dataset, era, tags, license_type, license_summary FROM tracks WHERE dataset = "mutopia_midi" LIMIT 100')
         elif channel_id == 'korean_master':
-            c.execute('SELECT id, title, composer, dataset, era, tags FROM tracks WHERE dataset = "korean_jeongganbo" LIMIT 100')
+            c.execute('SELECT id, title, composer, dataset, era, tags, license_type, license_summary FROM tracks WHERE dataset = "korean_jeongganbo" LIMIT 100')
+        # ... (생략)
         elif channel_id == 'piano_healing':
             c.execute('SELECT id, title, composer, dataset, era, tags FROM tracks WHERE dataset = "adl-piano-midi" LIMIT 100')
         else:

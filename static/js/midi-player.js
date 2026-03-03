@@ -415,11 +415,11 @@
 
       resultsEl.style.display = '';
       resultsEl.innerHTML = results.map(r => `
-        <div class="search-result-item" onclick="Harmonia.playById(${r.id}, '${esc(r.title)}')">
-          <span class="sr-emoji">🎵</span>
+        <div class="search-result-item" onclick="Harmonia.playById(${r.id}, '${esc(r.title)}', '${esc(r.license_text || '')}')">
+          <span class="sr-emoji">${r.license === 'Public Domain' || r.license === 'MIT License' ? '✅' : '🎵'}</span>
           <div class="sr-info">
             <span class="sr-title">${esc(r.title)}</span>
-            <span class="sr-meta">${esc(r.composer || '작자 미상')} | ${esc(r.dataset)}</span>
+            <span class="sr-meta">${esc(r.composer || '작자 미상')} | ${esc(r.license_text || r.dataset)}</span>
           </div>
         </div>
       `).join('');
@@ -459,16 +459,17 @@
           title: track.title,
           composer: track.composer,
           dataset: track.dataset,
+          licenseText: track.license_text,
           index: idx,
           isStreaming: true
         });
         
         html += `
           <div class="mp-track" data-idx="${idx}" onclick="Harmonia.loadStreamingTrack(${idx})">
-            <span class="mp-track-icon">▶</span>
+            <span class="mp-track-icon">${track.license === 'Public Domain' || track.license === 'MIT License' ? '✅' : '▶'}</span>
             <div class="mp-track-body">
               <div class="mp-track-title">${esc(track.title)}</div>
-              <div class="mp-track-info">${esc(track.composer || '작자 미상')} | ${esc(track.dataset)}</div>
+              <div class="mp-track-info">${esc(track.composer || '작자 미상')} | ${esc(track.license_text || track.dataset)}</div>
             </div>
           </div>`;
       });
@@ -489,7 +490,31 @@
     const el = document.querySelector(`.mp-track[data-idx="${idx}"]`);
     if (el) el.classList.add('active');
 
-    playById(track.id, track.title);
+    playById(track.id, track.title, track.licenseText);
+  }
+
+  /** Play a song directly from DB by ID (YouTube style) */
+  async function playById(id, title, licenseText = "") {
+    $('global-search-results').style.display = 'none';
+    $('global-search').value = '';
+    
+    stopMidi();
+    showBottomPlayer(title, licenseText || "아카이브 검색 결과");
+    setText('mp-time', '스트리밍 중...');
+
+    try {
+      // ⚡ 유튜브식 프로그레시브 로딩
+      const response = await fetch(`/api/stream?id=${id}`);
+      if (!response.ok) throw new Error("Stream error");
+
+      const arrayBuffer = await response.arrayBuffer();
+      currentMidi = new Midi(arrayBuffer);
+      setText('mp-time', '재생 중');
+      startPlayback(0);
+    } catch (e) {
+      setText('mp-time', '재생 실패');
+      console.error(e);
+    }
   }
 
   function searchResultClick(regionId, encodedTitle) {
