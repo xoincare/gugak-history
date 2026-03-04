@@ -503,6 +503,9 @@
     setText('mp-time', '스트리밍 중...');
 
     try {
+      // ⚡ 재생 기록 로깅 (랭킹 반영)
+      fetch(`/api/play-log?id=${id}`).catch(err => console.warn("Log failed", err));
+
       // ⚡ 유튜브식 프로그레시브 로딩
       const response = await fetch(`/api/stream?id=${id}`);
       if (!response.ok) throw new Error("Stream error");

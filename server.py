@@ -31,7 +31,20 @@ class HarmoniaHandler(SimpleHTTPRequestHandler):
             self.json_response(self.search_db(query))
             return
 
+        # API: Trending (Rankings)
+        if self.path == '/api/trending':
+            self.json_response(self.get_trending_songs())
+            return
+
+        # API: Log Play (Increase rank)
+        if self.path.startswith('/api/play-log'):
+            track_id = urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query).get('id', [''])[0]
+            self.log_play(track_id)
+            self.json_response({"status": "ok"})
+            return
+
         # API: Channel
+        # ... (생략)
         if self.path.startswith('/api/channel'):
             channel_id = urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query).get('id', [''])[0]
             self.json_response(self.get_channel_songs(channel_id))
@@ -58,9 +71,38 @@ class HarmoniaHandler(SimpleHTTPRequestHandler):
     def json_response(self, data):
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
+        # 스크롤로디 통합을 위해 모든 도메인에서의 CORS 허용
         self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
         self.end_headers()
         self.wfile.write(json.dumps(data, ensure_ascii=False).encode())
+
+    def log_play(self, track_id):
+        try:
+            conn = get_db()
+            cur = conn.cursor()
+            cur.execute("UPDATE tracks SET play_count = play_count + 1 WHERE id = %s", (track_id,))
+            conn.commit()
+            conn.close()
+        except Exception as e:
+            print(f"Log play error: {e}")
+
+    def get_trending_songs(self):
+        try:
+            conn = get_db()
+            cur = conn.cursor()
+            # 랭킹 순으로 상위 20곡 반환
+            cur.execute("""SELECT id, title, composer, dataset, era, tags, license_type, license_summary, play_count 
+                          FROM tracks 
+                          ORDER BY play_count DESC, title ASC 
+                          LIMIT 20""")
+            rows = cur.fetchall()
+            conn.close()
+            return [{"id": r[0], "title": r[1], "composer": r[2], "dataset": r[3], "era": r[4], "tags": r[5], "license": r[6], "license_text": r[7], "plays": r[8]} for r in rows]
+        except Exception as e:
+            print(f"Trending error: {e}")
+            return []
 
     def search_db(self, query):
         if len(query) < 2: return []
